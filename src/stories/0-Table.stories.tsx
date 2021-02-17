@@ -11,29 +11,37 @@ const mockRows = [
   {
     starred: false,
     symbol: 'UNI',
+    spot: '903',
   },
   {
     starred: true,
     symbol: 'SUSHI',
+    spot: '032',
   },
 ]
 const mockColumns = [
   {
-    width: 100,
+    width: 10,
     isBoolean: true,
     headerName: 'Starred',
     description: 'Click a column to favorite',
     sortable: true,
   },
   {
-    width: 200,
+    width: 20,
     isBoolean: false,
     headerName: 'Asset',
     sortable: true,
   },
+  {
+    width: 20,
+    isBoolean: false,
+    headerName: 'Spot',
+    sortable: true,
+  },
 ]
 
-export const ToStorybook = () => {
+export const TableStory = () => {
   return (
     <Container>
       <Table rows={mockRows} columns={mockColumns} />
@@ -45,6 +53,6 @@ const Container = styled.div`
   height: 400px;
   width: 400px;
 `
-ToStorybook.story = {
+TableStory.story = {
   name: 'Standard',
 }
